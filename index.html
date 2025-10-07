@@ -1,66 +1,456 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WerkWijzer | Home</title>
-    <!-- link -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <!-- script -->
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WerkWijzer - Jouw avontuur naar een baan</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/k logo.jpg"
+      type="image/x-icon"
+    />
     <script defer src="js/main.js"></script>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <div class="logo">
-                <h1>WerkWijzer</h1>
-                <p>Jouw avontuur naar een baan begint hier!</p>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container nav-container">
+        <div class="logo">
+          <h1>WerkWijzer</h1>
+        </div>
+        <nav class="nav-links">
+          <a href="#home" class="active">Home</a>
+          <a href="#paths">Paden</a>
+          <a href="#about">Over Ons</a>
+          <a href="#testimonials">Ervaringen</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <a href="#contact" class="nav-cta">Start Nu</a>
+        </div>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Jouw Avontuur naar een Baan Begint Hier!</h1>
+          <p>
+            Speciaal voor net afgestudeerde MBO'ers: ontdek de beste manier om
+            de arbeidsmarkt te betreden en bouw aan een succesvolle carrière met
+            onze praktische gids.
+          </p>
+          <div class="hero-btns">
+            <a href="#paths" class="btn btn-primary"
+              >Start Jouw Reis <i class="fas fa-arrow-right"></i
+            ></a>
+            <a href="#about" class="btn btn-secondary">Meer Informatie</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+      <div class="container">
+        <div class="stats-container">
+          <div class="stat-card">
+            <div class="stat-number">92%</div>
+            <div class="stat-text">Succesratio</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">1500+</div>
+            <div class="stat-text">Jongeren Geholpen</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">4.8/5</div>
+            <div class="stat-text">Gebruikerstevredenheid</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">3</div>
+            <div class="stat-text">Praktische Paden</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container" id="paths">
+      <div class="section-title">
+        <h2>Kies Jouw Pad</h2>
+        <p>
+          Ontdek de drie belangrijkste paden naar een succesvolle carrière. Elk
+          pad is speciaal ontworpen voor MBO-afgestudeerden.
+        </p>
+      </div>
+
+      <div class="path-selection">
+        <div class="path-card" data-path="werk-zoeken">
+          <div class="path-icon">
+            <i class="fas fa-search fa-2x"></i>
+          </div>
+          <h3>Werk Zoeken</h3>
+          <p>
+            Leer de beste manieren om vacatures te vinden en sollicitaties te
+            doen. Ontdek hoe je een aantrekkelijk CV en sollicitatiebrief maakt
+            die opvalt bij werkgevers.
+          </p>
+          <a href="/werk-zoeken" class="path-btn"
+            >Start deze Quest <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+
+        <div class="path-card" data-path="rechten-plichten">
+          <div class="path-icon">
+            <i class="fas fa-balance-scale fa-2x"></i>
+          </div>
+          <h3>Rechten & Plichten</h3>
+          <p>
+            Ontdek alles over arbeidscontracten, minimumloon en je rechten als
+            werknemer. Leer wat je kunt verwachten van een werkgever en hoe je
+            onderhandelt over je voorwaarden.
+          </p>
+          <a href="/rechten-plichten" class="path-btn"
+            >Start deze Quest <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+
+        <div class="path-card" data-path="tips-ondersteuning">
+          <div class="path-icon">
+            <i class="fas fa-lightbulb fa-2x"></i>
+          </div>
+          <h3>Tips & Ondersteuning</h3>
+          <p>
+            Krijg handige tips voor werk-privébalans, netwerken en omgaan met
+            stress. Bouw aan een succesvolle carrière met onze praktische
+            begeleiding en ondersteuning.
+          </p>
+          <a href="/tips-ondersteuning" class="path-btn"
+            >Start deze Quest <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+      <br /><br />
+    </main>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>Over WerkWijzer</h2>
+          <p>
+            Ontdek waarom WerkWijzer de beste keuze is voor jouw carrièrepad
+          </p>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              WerkWijzer is jouw persoonlijke gids op weg naar een succesvolle
+              carrière. Speciaal ontwikkeld voor net afgestudeerde MBO'ers,
+              bieden we alle tools en informatie die je nodig hebt om de
+              arbeidsmarkt met vertrouwen te betreden.
+            </p>
+            <p>
+              Onze missie is om jou te voorzien van praktische kennis, tips en
+              ondersteuning zodat je niet alleen een baan vindt, maar ook een
+              carrière opbouwt waar je trots op bent. We begrijpen de unieke
+              uitdagingen waar MBO'ers voor staan en hebben onze content daarop
+              afgestemd.
+            </p>
+            <p>
+              Met WerkWijzer krijg je toegang tot bewezen strategieën,
+              praktische templates en persoonlijke begeleiding om je droombaan
+              te vinden en te behouden.
+            </p>
+          </div>
+          <div class="about-features">
+            <div class="feature">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <h4>Speciaal voor MBO'ers</h4>
+                <p>Informatie afgestemd op jouw achtergrond en ervaring</p>
+              </div>
             </div>
-            <div class="level-indicator">
-                <span>Level: Werkzoeker</span>
-                <div class="xp-bar">
-                    <div class="xp-fill"></div>
-                </div>
+            <div class="feature">
+              <i class="fas fa-road"></i>
+              <div>
+                <h4>Stap-voor-stap Begeleiding</h4>
+                <p>
+                  Duidelijke stappen van sollicitatie tot contractondertekening
+                </p>
+              </div>
             </div>
-        </header>
-
-        <main class="game-board">
-            <div class="welcome-message">
-                <h2>Welkom, Avonturier!</h2>
-                <p class="text-light">Je bent net afgestudeerd en klaar voor je volgende level: de arbeidsmarkt. Kies je pad hieronder!</p>
+            <div class="feature">
+              <i class="fas fa-hand-holding-heart"></i>
+              <div>
+                <h4>Praktische Ondersteuning</h4>
+                <p>CV's, sollicitatiebrieven en meer - direct toepasbaar</p>
+              </div>
             </div>
-
-            <div class="path-selection">
-                <div class="path-card" data-path="werk-zoeken">
-                    <div class="path-icon">🔍</div>
-                    <h3>Werk Zoeken</h3>
-                    <p>Leer de beste manieren om vacatures te vinden en sollicitaties te doen</p>
-                    <button class="path-btn">Start deze Quest</button>
-                </div>
-
-                <div class="path-card" data-path="rechten-plichten">
-                    <div class="path-icon">⚖️</div>
-                    <h3>Rechten & Plichten</h3>
-                    <p>Ontdek alles over arbeidscontracten, minimumloon en je rechten als werknemer</p>
-                    <button class="path-btn">Start deze Quest</button>
-                </div>
-
-                <div class="path-card" data-path="tips-ondersteuning">
-                    <div class="path-icon">💡</div>
-                    <h3>Tips & Ondersteuning</h3>
-                    <p>Krijg handige tips voor werk-privébalans, netwerken en omgaan met stress</p>
-                    <button class="path-btn">Start deze Quest</button>
-                </div>
+            <div class="feature">
+              <i class="fas fa-users"></i>
+              <div>
+                <h4>Community</h4>
+                <p>Connect met andere starters en deel ervaringen</p>
+              </div>
             </div>
-        </main>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <footer>
-            <p>WerkWijzer - Jouw gids naar een succesvolle carrière &copy;</p>
-        </footer>
-    </div>
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-title">
+          <h2>Ervaringen</h2>
+          <p>Wat andere jongeren zeggen over WerkWijzer</p>
+        </div>
+        <div class="testimonial-container">
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              "Dankzij WerkWijzer had ik binnen twee weken mijn eerste baan! De
+              tips voor sollicitatiebrieven waren goud waard."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">S</div>
+              <div class="author-info">
+                <h4>Sarah de Vries</h4>
+                <p>Medewerker Marketing</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              "Ik wist niet wat ik moest verwachten van mijn eerste baan.
+              WerkWijzer hielp me met alles, van contract tot rechten."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">M</div>
+              <div class="author-info">
+                <h4>Mike Jansen</h4>
+                <p>ICT Medewerker</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              "De community en praktische tips gaven me het vertrouwen om te
+              solliciteren op banen die ik eerst niet aandurfde."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">L</div>
+              <div class="author-info">
+                <h4>Lisa van den Berg</h4>
+                <p>Verkoopmedewerker</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</body>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Veelgestelde Vragen</h2>
+          <p>Antwoorden op de meest gestelde vragen over WerkWijzer</p>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Is WerkWijzer echt gratis?</h3>
+              <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Ja, WerkWijzer is volledig gratis voor MBO-afgestudeerden. We
+                geloven dat iedereen recht heeft op goede begeleiding bij het
+                starten van een carrière.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Hoe lang duurt het voordat ik resultaat zie?</h3>
+              <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                De meeste gebruikers vinden binnen 2-4 weken een geschikte baan
+                na het volgen van onze paden. Het hangt natuurlijk af van je
+                sector en regio.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Kan ik ook hulp krijgen bij sollicitatiegesprekken?</h3>
+              <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Absoluut! In het 'Werk Zoeken' pad vind je uitgebreide tips en
+                oefeningen voor sollicitatiegesprekken, inclusief veelgestelde
+                vragen en hoe je deze het beste kunt beantwoorden.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Is WerkWijzer ook beschikbaar als app?</h3>
+              <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Momenteel is WerkWijzer alleen als website beschikbaar, maar we
+                werken aan een mobiele app die later dit jaar gelanceerd wordt.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Neem Contact Op</h2>
+          <p>Heb je vragen? We helpen je graag verder!</p>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h4>E-mail</h4>
+                <p>info@werkwijzer.nl</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h4>Telefoon</h4>
+                <p>+31 20 123 4567</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Adres</h4>
+                <p>Carrièrestraat 123, 1234 AB Amsterdam</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h4>Bereikbaarheid</h4>
+                <p>Maandag - Vrijdag: 9:00 - 17:00</p>
+              </div>
+            </div>
+          </div>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Naam</label>
+              <input type="text" id="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Onderwerp</label>
+              <input type="text" id="subject" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Bericht</label>
+              <textarea id="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Verstuur bericht</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h2>WerkWijzer</h2>
+            <p>
+              Jouw avontuur naar een baan begint hier! Speciaal voor
+              MBO-afgestudeerden.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h3>Paden</h3>
+            <ul>
+              <li><a href="/werk-zoeken">Werk Zoeken</a></li>
+              <li><a href="/rechten-plichten">Rechten & Plichten</a></li>
+              <li><a href="/tips-ondersteuning">Tips & Ondersteuning</a></li>
+              <li><a href="#">Community</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3>Bedrijf</h3>
+            <ul>
+              <li><a href="#">Over Ons</a></li>
+              <li><a href="#">Vacatures</a></li>
+              <li><a href="#">Partners</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Status</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            WerkWijzer - Jouw gids naar een succesvolle carrière &copy; 2023.
+            Alle rechten voorbehouden.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

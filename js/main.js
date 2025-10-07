@@ -1,82 +1,73 @@
-// Main JavaScript for WerkWijzer website - Alleen animaties
-document.addEventListener('DOMContentLoaded', function() {
-   // Initialize de website met alleen animaties
-   initAnimations();
-   // Add hover effects to path cards
-   const pathCards = document.querySelectorAll('.path-card');
-   pathCards.forEach(card => {
-       card.addEventListener('mouseenter', function() {
-           this.style.transform = 'translateY(-10px)';
-       });
-       card.addEventListener('mouseleave', function() {
-           this.style.transform = 'translateY(0)';
-       });
-   });
-   // Add click effect to buttons
-   const pathButtons = document.querySelectorAll('.path-btn');
-   pathButtons.forEach(button => {
-       button.addEventListener('click', function(e) {
-           // Voorkom dat het formulier wordt verzonden
-           e.preventDefault();
-           // Eenvoudige klik animatie
-           this.style.transform = 'scale(0.95)';
-           setTimeout(() => {
-               this.style.transform = 'scale(1)';
-           }, 150);
-       });
-   });
-   // Formulier animatie
-   const contactForm = document.querySelector('.message-form');
-   if (contactForm) {
-       contactForm.addEventListener('submit', function(e) {
-           e.preventDefault();
-           const submitBtn = this.querySelector('.submit-btn');
-           submitBtn.textContent = 'Versturen...';
-           submitBtn.disabled = true;
-           // Simuleer verzending
-           setTimeout(() => {
-               alert('Bedankt voor je bericht! We nemen snel contact met je op.');
-               submitBtn.textContent = 'Verstuur bericht';
-               submitBtn.disabled = false;
-               contactForm.reset();
-           }, 2000);
-       });
-   }
+// Mobile menu toggle
+document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.toggle('active');
+    this.querySelector('i').classList.toggle('fa-bars');
+    this.querySelector('i').classList.toggle('fa-times');
 });
-// Initialize alleen animaties
-function initAnimations() {
-   console.log('WerkWijzer animaties geïnitialiseerd!');
-   // Animate the XP bar (puur visueel)
-   animateXPBar();
-   // Add floating animation to path icons
-   const pathIcons = document.querySelectorAll('.path-icon');
-   pathIcons.forEach((icon, index) => {
-       icon.style.animation = `float 3s ease-in-out ${index * 0.5}s infinite`;
-   });
-   // Add CSS voor animaties
-   const style = document.createElement('style');
-   style.textContent = `
-       @keyframes float {
-           0% { transform: translateY(0px); }
-           50% { transform: translateY(-10px); }
-           100% { transform: translateY(0px); }
-       }
-       @keyframes pulse {
-           0% { opacity: 0.8; }
-           50% { opacity: 1; }
-           100% { opacity: 0.8; }
-       }
-   `;
-   document.head.appendChild(style);
-}
-// Animate the XP bar (puur visueel, geen functionaliteit)
-function animateXPBar() {
-   const xpFill = document.querySelector('.xp-fill');
-   // Laat de XP bar oneindig pulseren
-   setInterval(() => {
-       xpFill.style.opacity = '0.7';
-       setTimeout(() => {
-           xpFill.style.opacity = '1';
-       }, 500);
-   }, 2000);
-}
+
+// FAQ toggle functionality
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        const item = question.parentNode;
+        item.classList.toggle('active');
+    });
+});
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+            
+            // Update active nav link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+            });
+            this.classList.add('active');
+            
+            // Close mobile menu if open
+            document.querySelector('.nav-links').classList.remove('active');
+            document.querySelector('.mobile-menu-btn i').classList.remove('fa-times');
+            document.querySelector('.mobile-menu-btn i').classList.add('fa-bars');
+        }
+    });
+});
+
+// Add scroll effect to header
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+    
+    // Update active nav link based on scroll position
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= (sectionTop - 100)) {
+            current = section.getAttribute('id');
+        }
+    });
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+        }
+    });
+});
