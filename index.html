@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WerkWijzer | Home</title>
+    <!-- link -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- script -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>WerkWijzer</h1>
+                <p>Jouw avontuur naar een baan begint hier!</p>
+            </div>
+            <div class="level-indicator">
+                <span>Level: Werkzoeker</span>
+                <div class="xp-bar">
+                    <div class="xp-fill"></div>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-board">
+            <div class="welcome-message">
+                <h2>Welkom, Avonturier!</h2>
+                <p class="text-light">Je bent net afgestudeerd en klaar voor je volgende level: de arbeidsmarkt. Kies je pad hieronder!</p>
+            </div>
+
+            <div class="path-selection">
+                <div class="path-card" data-path="werk-zoeken">
+                    <div class="path-icon">🔍</div>
+                    <h3>Werk Zoeken</h3>
+                    <p>Leer de beste manieren om vacatures te vinden en sollicitaties te doen</p>
+                    <button class="path-btn">Start deze Quest</button>
+                </div>
+
+                <div class="path-card" data-path="rechten-plichten">
+                    <div class="path-icon">⚖️</div>
+                    <h3>Rechten & Plichten</h3>
+                    <p>Ontdek alles over arbeidscontracten, minimumloon en je rechten als werknemer</p>
+                    <button class="path-btn">Start deze Quest</button>
+                </div>
+
+                <div class="path-card" data-path="tips-ondersteuning">
+                    <div class="path-icon">💡</div>
+                    <h3>Tips & Ondersteuning</h3>
+                    <p>Krijg handige tips voor werk-privébalans, netwerken en omgaan met stress</p>
+                    <button class="path-btn">Start deze Quest</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>WerkWijzer - Jouw gids naar een succesvolle carrière &copy;</p>
+        </footer>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #0a192f;
+    --dark-blue: #112240;
+    --medium-blue: #233554;
+    --light-blue: #64ffda;
+    --beige: #e6f1ff;
+    --white: #ffffff;
+    --gradient: linear-gradient(135deg, var(--navy) 0%, var(--dark-blue) 50%, var(--medium-blue) 100%);
+    --card-gradient: linear-gradient(135deg, var(--dark-blue) 0%, var(--medium-blue) 100%);
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--gradient);
+    color: var(--beige);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid var(--light-blue);
+    margin-bottom: 30px;
+}
+
+.logo h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--light-blue);
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+}
+
+.logo p {
+    font-size: 1rem;
+    color: var(--beige);
+    margin-top: 5px;
+}
+
+.level-indicator {
+    text-align: right;
+}
+
+.level-indicator span {
+    font-weight: 700;
+    color: var(--light-blue);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.xp-bar {
+    width: 200px;
+    height: 10px;
+    background-color: var(--medium-blue);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.xp-fill {
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--light-blue), #4fd3c4);
+    border-radius: 5px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
+}
+
+/* Game Board Styles */
+.game-board {
+    background: rgba(10, 25, 47, 0.7);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+}
+
+.welcome-message {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.welcome-message h2 {
+    font-size: 2rem;
+    color: var(--light-blue);
+    margin-bottom: 15px;
+}
+
+.welcome-message p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Path Selection Styles */
+.path-selection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.path-card {
+    background: var(--card-gradient);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.path-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--light-blue);
+}
+
+.path-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    border-color: var(--light-blue);
+}
+
+.path-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.path-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--light-blue);
+}
+
+.path-card p {
+    margin-bottom: 20px;
+    color: var(--beige);
+}
+
+.path-btn {
+    background: linear-gradient(135deg, var(--light-blue), #4fd3c4);
+    color: var(--navy);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Nunito', sans-serif;
+}
+
+.path-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.4);
+}
+
+/* Achievements Styles */
+.achievements h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--light-blue);
+    font-size: 1.5rem;
+}
+
+.achievement-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.achievement {
+    background: var(--card-gradient);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 120px;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.achievement.unlocked {
+    opacity: 1;
+    border: 2px solid var(--light-blue);
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+}
+
+.achievement span {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.achievement p {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid var(--medium-blue);
+    color: var(--beige);
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .level-indicator {
+        margin-top: 15px;
+        text-align: center;
+    }
+    
+    .path-selection {
+        grid-template-columns: 1fr;
+    }
+    
+    .achievement-list {
+        flex-wrap: wrap;
+    }
+}
