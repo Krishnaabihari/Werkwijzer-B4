@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rechten & Plichten - WerkWijzer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/k logo.jpg"
+      type="image/x-icon"
+    />
+    <script defer src="js/main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+          <div class="logo">
+            <h1>WerkWijzer</h1>
+          </div>
+          <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+          </nav>
+          <div class="nav-actions">
+            <a href="index.html" class="nav-cta">Terug</a>
+          </div>
+          <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Ken Je Rechten & Plichten</h1>
+          <p>
+            Alles wat je moet weten over arbeidscontracten, minimumloon, 
+            arbeidstijdenwet en verlofregelingen. Weet waar je recht op hebt 
+            en wat er van jou verwacht wordt als werknemer.
+          </p>
+          <div class="hero-btns">
+            <a href="#contracten" class="btn btn-primary"
+              >Ontdek Contracten <i class="fas fa-arrow-right"></i
+            ></a>
+            <a href="#rechten" class="btn btn-secondary">Jouw Rechten</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Info Boxes -->
+    <section class="content-section">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="info-box">
+              <div class="info-icon">
+                <i class="fas fa-file-contract"></i>
+              </div>
+              <h3>Contracten</h3>
+              <p>Vast, tijdelijk of oproep - weet wat je tekent</p>
+              <a href="#contracten" class="info-link">Meer info →</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="info-box">
+              <div class="info-icon">
+                <i class="fas fa-euro-sign"></i>
+              </div>
+              <h3>Minimumloon</h3>
+              <p>Hoeveel verdien je minimaal? Bekijk de actuele bedragen</p>
+              <a href="#rechten" class="info-link">Meer info →</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="info-box">
+              <div class="info-icon">
+                <i class="fas fa-umbrella-beach"></i>
+              </div>
+              <h3>Verlof</h3>
+              <p>Vakantie, ziekte, zwangerschap - je rechten op verlof</p>
+              <a href="#verlof" class="info-link">Meer info →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Arbeidscontracten Section -->
+    <section class="content-section bg-dark" id="contracten">
+      <div class="container">
+        <div class="section-title">
+          <h2>Arbeidscontracten</h2>
+          <p>Verschillende soorten contracten en wat ze betekenen voor jou</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="contract-card">
+              <div class="contract-header">
+                <i class="fas fa-file-contract"></i>
+                <h3>Vast Contract</h3>
+                <span class="contract-badge veilig">Veilig</span>
+              </div>
+              <div class="contract-body">
+                <p>Een contract voor onbepaalde tijd zonder einddatum - de meest veilige optie.</p>
+                <ul>
+                  <li><i class="fas fa-check"></i> Doorbetaling bij ziekte (max 2 jaar)</li>
+                  <li><i class="fas fa-check"></i> Pensioenopbouw</li>
+                  <li><i class="fas fa-check"></i> Vakantiegeld en toeslagen</li>
+                  <li><i class="fas fa-check"></i> Ontslagvergunning nodig</li>
+                  <li><i class="fas fa-check"></i> Transitievergoeding bij ontslag</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="contract-card">
+              <div class="contract-header">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Tijdelijk Contract</h3>
+                <span class="contract-badge flexibel">Flexibel</span>
+              </div>
+              <div class="contract-body">
+                <p>Een contract met vaste einddatum - ideaal voor projecten of vervanging.</p>
+                <ul>
+                  <li><i class="fas fa-check"></i> Maximaal 3 jaar looptijd</li>
+                  <li><i class="fas fa-check"></i> Maximaal 3 contracten binnen 3 jaar</li>
+                  <li><i class="fas fa-check"></i> Recht op vast contract daarna</li>
+                  <li><i class="fas fa-check"></i> Geen ontslagvergunning nodig</li>
+                  <li><i class="fas fa-check"></i> Eindigt automatisch</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="contract-card">
+              <div class="contract-header">
+                <i class="fas fa-phone"></i>
+                <h3>Oproepcontract</h3>
+                <span class="contract-badge flexibel">Flexibel</span>
+              </div>
+              <div class="contract-body">
+                <p>Je werkt alleen als je wordt opgeroepen - flexibel maar minder zeker.</p>
+                <ul>
+                  <li><i class="fas fa-check"></i> Geen vaste uren</li>
+                  <li><i class="fas fa-check"></i> Minimaal 4 dagen van tevoren oproep</li>
+                  <li><i class="fas fa-check"></i> Maximaal 3 contracten binnen 3 jaar</li>
+                  <li><i class="fas fa-check"></i> Kan nul-urencontract zijn</li>
+                  <li><i class="fas fa-check"></i> Betaald voor gewerkte uren</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contract voorwaarden in boxes -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="section-subtitle">
+              <h3>Belangrijke contract voorwaarden</h3>
+              <p>Waar moet je op letten in je contract?</p>
+            </div>
+            <div class="row g-3">
+              <div class="col-md-6 col-lg-3">
+                <div class="condition-box">
+                  <i class="fas fa-hourglass-half"></i>
+                  <h4>Proeftijd</h4>
+                  <p>Maximaal 2 maanden bij contract langer dan 2 jaar</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="condition-box">
+                  <i class="fas fa-calendar-times"></i>
+                  <h4>Opzegtermijn</h4>
+                  <p>Minimaal 1 maand, afhankelijk van dienstjaren</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="condition-box">
+                  <i class="fas fa-euro-sign"></i>
+                  <h4>Salaris</h4>
+                  <p>Moet tijdig worden betaald volgens afspraak</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="condition-box">
+                  <i class="fas fa-tasks"></i>
+                  <h4>Functie</h4>
+                  <p>Duidelijke taakomschrijving en verantwoordelijkheden</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Arbeidsrechten Section -->
+    <section class="content-section" id="rechten">
+      <div class="container">
+        <div class="section-title">
+          <h2>Arbeidsrechten</h2>
+          <p>Jouw rechten als werknemer in Nederland</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Minimumloon Box -->
+          <div class="col-lg-6">
+            <div class="rights-card featured">
+              <div class="rights-header">
+                <i class="fas fa-euro-sign"></i>
+                <h3>Minimumloon 2025</h3>
+                <span class="salary-badge">€2.120,00/maand</span>
+              </div>
+              <div class="rights-body">
+                <p>Het minimumloon is het laagste loon dat een werkgever mag betalen.</p>
+                
+                <div class="salary-breakdown">
+                  <h5>Leeftijden minimumloon:</h5>
+                  <div class="salary-grid">
+                    <div class="salary-item">
+                      <span class="age">15 jaar</span>
+                      <span class="amount">€3,25/uur</span>
+                    </div>
+                    <div class="salary-item">
+                      <span class="age">16 jaar</span>
+                      <span class="amount">€3,90/uur</span>
+                    </div>
+                    <div class="salary-item">
+                      <span class="age">17 jaar</span>
+                      <span class="amount">€4,70/uur</span>
+                    </div>
+                    <div class="salary-item">
+                      <span class="age">18 jaar</span>
+                      <span class="amount">€6,35/uur</span>
+                    </div>
+                    <div class="salary-item">
+                      <span class="age">19 jaar</span>
+                      <span class="amount">€9,55/uur</span>
+                    </div>
+                    <div class="salary-item">
+                      <span class="age">20 jaar</span>
+                      <span class="amount">€12,25/uur</span>
+                    </div>
+                    <div class="salary-item highlight">
+                      <span class="age">21+ jaar</span>
+                      <span class="amount">€14,15/uur</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Arbeidstijden Box -->
+          <div class="col-lg-6">
+            <div class="rights-card">
+              <div class="rights-header">
+                <i class="fas fa-clock"></i>
+                <h3>Arbeidstijdenwet</h3>
+              </div>
+              <div class="rights-body">
+                <p>Regels over hoe lang en wanneer je mag werken.</p>
+                
+                <div class="time-rules">
+                  <div class="rule-item">
+                    <i class="fas fa-calendar-day"></i>
+                    <div>
+                      <strong>Per dag</strong>
+                      <span>Max. 12 uur</span>
+                    </div>
+                  </div>
+                  <div class="rule-item">
+                    <i class="fas fa-calendar-week"></i>
+                    <div>
+                      <strong>Per week</strong>
+                      <span>Max. 60 uur</span>
+                    </div>
+                  </div>
+                  <div class="rule-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <div>
+                      <strong>16 weken gemiddeld</strong>
+                      <span>Max. 48 uur</span>
+                    </div>
+                  </div>
+                  <div class="rule-item">
+                    <i class="fas fa-bed"></i>
+                    <div>
+                      <strong>Rust tussen diensten</strong>
+                      <span>Min. 11 uur</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="break-info">
+                  <h5>Pauzerechten:</h5>
+                  <ul>
+                    <li>4,5-5,5 uur werk: 15 minuten pauze</li>
+                    <li>5,5-10 uur werk: 30 minuten pauze</li>
+                    <li>Meer dan 10 uur werk: 45 minuten pauze</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Belangrijke rechten in grid -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="section-subtitle">
+              <h3>Jouw belangrijkste rechten</h3>
+            </div>
+            <div class="rights-grid">
+              <div class="right-item">
+                <i class="fas fa-money-bill-wave"></i>
+                <h4>Recht op loon</h4>
+                <p>Je werkgever moet je op tijd betalen volgens afspraak</p>
+              </div>
+              <div class="right-item">
+                <i class="fas fa-coffee"></i>
+                <h4>Recht op pauzes</h4>
+                <p>Bij meer dan 5,5 uur werk minimaal 30 minuten pauze</p>
+              </div>
+              <div class="right-item">
+                <i class="fas fa-umbrella-beach"></i>
+                <h4>Recht op vakantie</h4>
+                <p>Minimaal 4 keer je wekelijkse arbeidsduur aan vakantiedagen</p>
+              </div>
+              <div class="right-item">
+                <i class="fas fa-shield-alt"></i>
+                <h4>Veilige werkomgeving</h4>
+                <p>Je werkgever moet zorgen voor veilige werkomstandigheden</p>
+              </div>
+              <div class="right-item">
+                <i class="fas fa-user-secret"></i>
+                <h4>Recht op privacy</h4>
+                <p>Je werkgever mag niet zomaar je privé-informatie inzien</p>
+              </div>
+              <div class="right-item">
+                <i class="fas fa-balance-scale"></i>
+                <h4>Gelijke behandeling</h4>
+                <p>Geen discriminatie op basis van geslacht, leeftijd, etc.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Verlofregelingen Section -->
+    <section class="content-section bg-dark" id="verlof">
+      <div class="container">
+        <div class="section-title">
+          <h2>Verlofregelingen</h2>
+          <p>Verschillende soorten verlof waar je recht op hebt</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="leave-card">
+              <div class="leave-icon">
+                <i class="fas fa-umbrella-beach"></i>
+              </div>
+              <h3>Vakantiedagen</h3>
+              <div class="leave-details">
+                <span class="leave-amount">20-25 dagen</span>
+                <span class="leave-type">Betaald</span>
+              </div>
+              <ul>
+                <li>Minimaal 4x wekelijkse arbeidsduur</li>
+                <li>Vakantiegeld: 8% van jaarloon</li>
+                <li>6 maanden geldig na opbouwjaar</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="leave-card">
+              <div class="leave-icon">
+                <i class="fas fa-baby"></i>
+              </div>
+              <h3>Zwangerschapsverlof</h3>
+              <div class="leave-details">
+                <span class="leave-amount">16 weken</span>
+                <span class="leave-type">100% loon</span>
+              </div>
+              <ul>
+                <li>4-6 weken voor bevalling</li>
+                <li>10-12 weken na bevalling</li>
+                <li>Partner: 1 week partnerverlof (betaald)</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="leave-card">
+              <div class="leave-icon">
+                <i class="fas fa-heartbeat"></i>
+              </div>
+              <h3>Ziekteverlof</h3>
+              <div class="leave-details">
+                <span class="leave-amount">Max 2 jaar</span>
+                <span class="leave-type">70% loon</span>
+              </div>
+              <ul>
+                <li>Minimaal minimumloon</li>
+                <li>Eerste jaar soms 100%</li>
+                <li>Re-integratieplicht</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="leave-card">
+              <div class="leave-icon">
+                <i class="fas fa-calendar-plus"></i>
+              </div>
+              <h3>Calamaresiverlof</h3>
+              <div class="leave-details">
+                <span class="leave-amount">1-2 dagen</span>
+                <span class="leave-type">Soms betaald</span>
+              </div>
+              <ul>
+                <li>Voor bruiloften, begrafenissen</li>
+                <li>Verhuizing, examens</li>
+                <li>Altijd overleg met werkgever</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Aanvullende verlofregelingen -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="section-subtitle">
+              <h3>Aanvullende verlofregelingen</h3>
+            </div>
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="additional-leave">
+                  <h4><i class="fas fa-users"></i> Ouderschapsverlof</h4>
+                  <p>26 keer wekelijkse arbeidsduur tot kind 8 jaar wordt</p>
+                  <span class="leave-info">Eerste 9 weken 70% loon</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="additional-leave">
+                  <h4><i class="fas fa-graduation-cap"></i> Studieverlof</h4>
+                  <p>Voor erkende opleidingen en ontwikkelingsmogelijkheden</p>
+                  <span class="leave-info">Betaald en onbetaald mogelijk</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plichten Section -->
+    <section class="content-section" id="plichten">
+      <div class="container">
+        <div class="section-title">
+          <h2>Jouw Plichten</h2>
+          <p>Wat er van jou wordt verwacht als werknemer</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="duty-card">
+              <div class="duty-header">
+                <i class="fas fa-tasks"></i>
+                <h3>Arbeidsplichten</h3>
+              </div>
+              <div class="duty-body">
+                <div class="duty-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Je werk naar beste kunnen uitvoeren</span>
+                </div>
+                <div class="duty-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Volg instructies van werkgever op</span>
+                </div>
+                <div class="duty-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Ziekte tijdig melden</span>
+                </div>
+                <div class="duty-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Geheimhouding bedrijfsinformatie</span>
+                </div>
+                <div class="duty-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Zorg dragen voor bedrijfseigendommen</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="duty-card">
+              <div class="duty-header">
+                <i class="fas fa-user-shield"></i>
+                <h3>Gedragsplichten</h3>
+              </div>
+              <div class="duty-body">
+                <div class="duty-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Professioneel gedrag tonen</span>
+                </div>
+                <div class="duty-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Geen misbruik maken van vertrouwen</span>
+                </div>
+                <div class="duty-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Geen schade toebrengen aan bedrijf</span>
+                </div>
+                <div class="duty-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Zorgplicht voor collega's en klanten</span>
+                </div>
+                <div class="duty-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Integriteit in werk</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section bg-dark" id="faq">
+      <div class="container">
+        <div class="section-title">
+          <h2>Veelgestelde Vragen</h2>
+          <p>Antwoorden op vragen over rechten en plichten</p>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Wat moet er altijd in mijn contract staan?</h3>
+              <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Je contract moet minimaal bevatten: namen partijen, startdatum, 
+                plaats werk, functie, salaris, arbeidsduur, vakantiedagen, 
+                opzegtermijn en eventuele CAO.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Kan mijn werkgever zomaar mijn contract opzeggen?</h3>
+              <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Nee, bij een vast contract heeft je werkgever toestemming nodig 
+                van UWV of kantonrechter. Bij een tijdelijk contract eindigt 
+                deze automatisch, tenzij er sprake is van voortzetting.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Hoeveel vakantiedagen heb ik precies recht op?</h3>
+              <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Wettelijk minimaal 4 keer je wekelijkse arbeidsduur. Werk je 
+                40 uur? Dan 20 dagen (4x5). Veel CAO's bieden meer dagen, 
+                vaak 25 of meer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <!-- Footer -->
+   <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>WerkWijzer</h2>
+          <p>
+            Jouw avontuur naar een baan begint hier! Speciaal voor
+            MBO-afgestudeerden.
+          </p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h3>Paden</h3>
+          <ul>
+            <li><a href="/werk-zoeken">Werk Zoeken</a></li>
+            <li><a href="/rechten-plichten">Rechten & Plichten</a></li>
+            <li><a href="/tips-ondersteuning">Tips & Ondersteuning</a></li>
+            <li><a href="#">Community</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>Bedrijf</h3>
+          <ul>
+            <li><a href="#">Over Ons</a></li>
+            <li><a href="#">Vacatures</a></li>
+            <li><a href="#">Partners</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Status</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          WerkWijzer - Jouw gids naar een succesvolle carrière &copy; 2023.
+          Alle rechten voorbehouden.
+        </p>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>
